@@ -1,0 +1,25 @@
+# Blog settings
+permalink: /projects/:title
+
+
+# My variables
+name: sgelb
+description: projects and stuff
+github: https://sgelb.github.com
+
+
+include: ["_pages", "demo"]
+
+
+# Sass
+sass:
+  style: :compressed
+  sass_dir: _sass
+
+
+# Markdown
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge

@@ -1,0 +1,151 @@
+---
+---
+@charset "utf-8";
+@import "highlight";
+
+$color-black: #272727;
+$color-white: #FFFFFF;
+$color-grey: #EEEEEE;
+$color-darkgrey: #888888;
+$color-link: #1A0DAB;
+
+// breakpoint
+$br: 800px;
+
+
+// reset
+
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+}
+
+
+// base
+
+body {
+	font-weight: 400;
+  line-height: 1.25;
+	font-family: 'Inconsolata', sans-serif;
+	color: $color-black;
+	background-color: $color-white;
+	max-width: $br;
+	margin: auto;
+	padding: 1rem 2rem 1rem 2rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: $color-link;
+  text-decoration: underline;
+  &:hover {
+    background-color: $color-grey;
+  }
+}
+
+pre,
+code {
+  background-color: $color-grey;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+// layout
+
+.header {
+  @extend .leftright;
+	padding-bottom: 0.2rem;
+	margin-bottom: 3rem;
+  border-bottom: 1px solid $color-darkgrey;
+	h1 {
+		font-size: 2em;
+		margin-bottom: 0;
+	}
+  a {
+    color: $color-black;
+    text-decoration: none;
+  }
+  a:not(:last-of-type){
+    padding-right: 0.5rem;
+  }
+}
+
+.frontpage {
+  a {
+    color: $color-black;
+    text-decoration: none;
+  }
+  section {
+    margin-top: 2rem;
+  }
+}
+
+.categories {
+  color: $color-darkgrey;
+}
+
+.content {
+  margin-top: 1rem;
+  h1, h2, h3 {
+    padding-top: 1rem;
+  }
+
+  ul {
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+  }
+  ol {
+    margin-left: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+  p {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.image {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  figcaption {
+    font-size: 0.875rem;
+  }
+}
+
+.footer {
+  margin-top: 1rem;
+}
+
+.leftright {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+  :last-child {
+    text-align: right;
+  }
+}
