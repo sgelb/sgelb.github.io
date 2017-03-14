@@ -5,7 +5,7 @@ permalink: /projects/:title
 # My variables
 name: sgelb
 description: projects and stuff
-github: https://sgelb.github.com
+github: https://github.com/sgelb
 
 
 include: ["_pages", "demo"]
